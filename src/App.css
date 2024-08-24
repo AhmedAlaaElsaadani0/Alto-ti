@@ -1,0 +1,207 @@
+/* General styles */
+/* 
+///////////////////////////////////////////
+// Coloring
+// General style and classes
+// dots
+// selection
+// scrollbar
+// responsive
+
+///////////////////////////////////////////
+*/
+
+/* 
+//////////Coloring///////////
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Balthazar&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,300;1,500&display=swap");
+html {
+  overflow-x: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --prim-color: #f5f5f5;
+  --bg-color: #f5f5f5;
+  --second-color: #000000;
+  --ternary-color: #c0c0c0; /*using in banner*/
+  --navbar-bg: #000;
+  --loading-dots-color: var(--navbar-bg);
+  --navbar-text-color: #9d9d9d;
+  --primHover-color: #f5f5f5;
+  --about-special-color: #000000;
+  --Aftacast-amr-designer-color: rgba(0, 0, 0, 0.1);
+  --services_heading_color: #000;
+  --services_card_bg: #f0f0f0;
+  --contact_heading_color: #000;
+  --contact_p_color: #000;
+  --contact_form_heading_color: #000;
+  --contact_form_bg: #fff;
+  --contact_form_button_bg: #000;
+  --contact_form_input_bg: #f0f0f0;
+}
+.dark {
+  --bg-color: #000000;
+  --second-color: #f5f5f5;
+  --navbar-bg: #919191;
+  --loading-dots-color: var(--navbar-bg);
+  --navbar-text-color: #000;
+  --about-special-color: #9d9d9d;
+  --Aftacast-amr-designer-color: rgba(240, 240, 240, 0.2);
+  --services_heading_color: #ffffff;
+  --services_card_bg: #1f1f1f;
+  --contact_heading_color: #fff;
+  --contact_p_color: #9d9d9d;
+  --contact_form_heading_color: #9d9d9d;
+  --contact_form_bg: rgba(157, 157, 157, 0.2);
+  --contact_form_button_bg: #9d9d9d;
+  --contact_form_input_bg: rgba(157, 157, 157, 0.2);
+}
+
+/* 
+//////////General style and classes///////////
+*/
+body {
+  font-family: "Balthazar", serif;
+  color: var(--second-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+/* 
+//////////dots///////////
+*/
+
+#About,
+#Services {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.dots {
+  background-image: radial-gradient(
+    var(--Aftacast-amr-designer-color) 8px,
+    transparent 8px
+  );
+  background-size: 20px 20px;
+  z-index: -3;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+}
+#About .dots {
+  top: 0;
+  right: 10%;
+}
+#Services .dots {
+  top: 85%;
+  right: -1%;
+  transform: rotate(60deg) !important;
+  -webkit-transform: rotate(60deg) !important;
+  -moz-transform: rotate(60deg) !important;
+  -ms-transform: rotate(60deg) !important;
+  -o-transform: rotate(60deg) !important;
+}
+
+/* 
+//////////selection///////////
+*/
+::selection {
+  background-color: var(--second-color);
+  color: var(--prim-color);
+}
+/* 
+//////////scrollbar///////////
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ternary-color);
+}
+::-webkit-scrollbar-thunb:active {
+  background-color: var(--ternary-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  margin: -10px 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .dots {
+    width: 140px;
+    height: 140px;
+  }
+
+  #About .dots {
+    right: 8%;
+  }
+
+  #Services .dots {
+    top: 90%;
+    right: -10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dots {
+    width: 120px;
+    height: 120px;
+  }
+  #About .dots {
+    right: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dots {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dots {
+    width: 60px;
+    height: 60px;
+  }
+  #About .dots {
+    right: 0%;
+  }
+
+  #Services .dots {
+    top: 92%;
+    right: -15px;
+  }
+}

@@ -1,0 +1,129 @@
+/* General styles */
+/* 
+///////////////////////////////////////////
+// row and display
+// text h3 && p
+// responsive
+///////////////////////////////////////////
+*/
+
+/* 
+//////////row and display///////////
+*/
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 75px;
+  margin:50px auto;
+  width: 90%;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-12 {
+  grid-column: span 12;
+  width: 100%;
+}
+
+.card {
+  background: var(--services_card_bg);
+}
+/* 
+////////text h3 && p///////////
+*/
+
+.card h3 {
+  color: var(--services_heading_color);
+  text-align: center;
+  width: fit-content;
+    margin: 10px auto;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 135%; /* 43.2px */
+  border-bottom: 5px solid var(--services_heading_color);
+
+}
+.card p {
+  color: var(--second-color);
+  text-align: justify;
+  font-family: "Copperplate Gothic Light";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 115%; /* 27.6px */
+  padding: 11px 28px 19px 32px;
+
+}
+/* 
+////////Responsive///////////
+*/
+
+
+@media (max-width: 768px) {
+    .row {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  
+    .col-6 {
+      grid-column: span 4;
+    }
+  
+    .col-12 {
+      grid-column: span 4;
+    }
+  
+    .card h3 {
+      font-size: 20px;
+    }
+  
+    .card p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .col-6 {
+      grid-column: span 2;
+    }
+  
+    .col-12 {
+      grid-column: span 2;
+    }
+  
+    .card h3 {
+      font-size: 18px;
+    }
+  
+    .card p {
+      font-size: 16px;
+      padding: 10px 20px 15px 20px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .col-6, .col-12 {
+      grid-column: span 1;
+    }
+  
+    .card h3 {
+      font-size: 16px;
+    }
+  
+    .card p {
+      font-size: 14px;
+      padding: 8px 15px 10px 15px;
+    }
+  }

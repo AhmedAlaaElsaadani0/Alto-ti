@@ -1,0 +1,170 @@
+/* General styles */
+/* 
+///////////////////////////////////////////
+// grid
+// text
+// Image
+// dots && black_bg
+// responsive
+
+///////////////////////////////////////////
+*/
+
+
+/* 
+//////////grid///////////
+*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  z-index: 4;
+  padding: 20px;
+
+}
+
+/* 
+//////////text///////////
+*/
+
+.text {
+  color: var(--ternary-color);
+  text-align: justify;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%; /* 43.2px */
+}
+
+.text p {
+  width: 80%;
+  margin: auto;
+  z-index: 4;
+
+}
+
+/* 
+//////////Image///////////
+*/
+
+.Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.Image img {
+  width: 50%;
+  height: 80%;
+  object-fit: cover;
+}
+
+
+/* 
+//////////dots && black_bg///////////
+*/
+.Image .dots {
+  background-image: radial-gradient(var(--about-special-color) 10px, transparent 10px);
+  background-size: 32px 32px;
+  width: 50%;
+  height: 53%;
+  z-index: -1;
+  bottom: -22px;
+  left: 40%;
+  position: absolute;
+}
+
+.Image .black_bg {
+  background-color: var(--about-special-color);
+  width: 50%;
+  height: 80%;
+  z-index: -1;
+  top: 18px;
+  right: 35%;
+  position: absolute;
+}
+
+/* 
+//////////Responsive///////////
+*/
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .text {
+    font-size: 28px;
+  }
+
+  .Image img {
+    width: 100%;
+
+    height: 100%;
+  }
+  .Image .black_bg {
+    display: none;
+  }
+  
+  .Image .dots {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .text p {
+        width: 90%;
+    }
+
+  .Image {
+    margin: auto;
+  }
+
+  .Image img {
+    width: 70%;
+    height: auto;
+  }
+  
+
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 24px;
+  }
+
+  .Image img {
+    width: 80%;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .text p {
+    width: 100%;
+  }
+
+  .Image img {
+    width: 90%;
+    height: auto;
+  }
+}

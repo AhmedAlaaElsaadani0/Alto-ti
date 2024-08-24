@@ -1,0 +1,35 @@
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+}
+.loader {
+  --_g: no-repeat radial-gradient(#000 68%,#0000 71%);
+  width: 180px;
+  /*controlthesize*/aspect-ratio: 8/5;
+  -webkit-mask: var(--_g),var(--_g),var(--_g);
+  -webkit-mask-size: 25% 40%;
+  background: var(
+    --loading-dots-color);
+  animation: load 2s infinite;
+  -webkit-animation: load 2s infinite;
+}
+
+@keyframes load {
+  0%    {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+  16.67%{-webkit-mask-position: 0% 100%,50% 0%  ,100% 0%  }
+  33.33%{-webkit-mask-position: 0% 100%,50% 100%,100% 0%  }
+  50%   {-webkit-mask-position: 0% 100%,50% 100%,100% 100%}
+  66.67%{-webkit-mask-position: 0% 0%  ,50% 100%,100% 100%}
+  83.33%{-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 100%}
+  100%  {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+}

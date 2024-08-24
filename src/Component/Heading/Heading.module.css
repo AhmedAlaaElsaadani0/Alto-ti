@@ -1,0 +1,144 @@
+
+/* General styles */
+/* 
+///////////////////////////////////////////
+// Heading
+// text h2 && p
+// responsive
+
+///////////////////////////////////////////
+*/
+
+/* 
+//////////Heading///////////
+*/
+.Heading {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--second-color);
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* 
+//////////text h2 && p///////////
+*/
+.Heading .text {
+  width: 60%;
+  margin: auto;
+  position: relative;
+  
+}
+.Heading .text h2 {
+  z-index: 0;
+  color: rgba(157, 157, 157, 0.15);
+  font-size: 150px;
+  font-weight: 700;
+  border-bottom: var(--second-color) 8px solid;
+}
+.Heading .text p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    font-size: 4rem;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+}
+
+/* 
+//////////responsive///////////
+*/
+@media (max-width: 1440px) {
+    
+.Heading .text h2 {
+    font-size: 150px;
+  }
+  .Heading .text p {
+      font-size: 2.4rem;
+  }
+}
+@media (max-width: 1200px) {
+    .Heading .text {
+      width: 70%;
+    }
+  
+    .Heading .text h2 {
+      font-size: 120px;
+    }
+  
+    .Heading .text p {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .Heading .text {
+      width: 80%;
+    }
+  
+    .Heading .text h2 {
+      font-size: 100px;
+    }
+  
+    .Heading .text p {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Heading {
+      font-size: 2rem;
+    }
+  
+    .Heading .text {
+      width: 90%;
+    }
+  
+    .Heading .text h2 {
+      font-size: 80px;
+    }
+  
+    .Heading .text p {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .Heading {
+      font-size: 1.5rem;
+    }
+  
+    .Heading .text {
+      width: 100%;
+    }
+  
+    .Heading .text h2 {
+      font-size: 60px;
+    }
+  
+    .Heading .text p {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .Heading {
+      font-size: 1.2rem;
+    }
+  
+    .Heading .text h2 {
+      font-size: 50px;
+      border-bottom: #000 3px solid;
+    }
+  
+    .Heading .text p {
+      font-size: 1.5rem;
+    }
+  }
